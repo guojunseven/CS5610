@@ -1,0 +1,149 @@
+#about_button {
+    text-decoration: underline;
+}
+
+.content {
+    align-items: center;
+    padding-top: 100px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+
+.col {
+    width: 40%;
+}
+
+#abilities .row {
+    gap: 100px;
+}
+
+#abilities h1 {
+    text-align: center;
+    color: #004b23;
+}
+
+.ability_score {
+    float: right;
+    color: #3a0ca3;
+}
+
+#abilities {
+    font-family: page_title;
+}
+
+.hobbies {
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-indent: 20%;
+    color: #192a51;
+}
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-family: birth_stone;
+    font-size: x-large;
+}
+
+figure {
+    border-color:darkred;
+    border-width: 5px;
+    border-style: solid;
+    width: 80%;
+    margin: auto;
+}
+
+.game_row {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding:0;
+}
+
+#hobbies {
+    font-family: birth_stone;
+    font-size: x-large;
+}
+
+#hobbies h1 {
+    color: #fe7f2d;
+}
+
+#hobbies i {
+    padding-right: 50px;
+    color: #ff9b54;
+}
+
+#games {
+    font-family: game;
+}
+
+#games h2 {
+    text-align: center;
+    color: #0b3954;
+}
+
+#games h1 {
+    color: #8d0801;
+}
+
+html {
+    background-color: #d5c6e0;
+}
+
+@media  screen and (max-width: 1000px) {
+    
+    .game_row {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    #abilities .row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .col {
+        width: 80%;
+    }
+
+    .row {
+        width: 90%;
+    }
+}
+
+@media  screen and (max-width: 600px) {
+    #hobbies {
+        font-size: medium;
+    } 
+    #games {
+        font-size: small;
+    }
+    .game_row .col{
+        width: 100%;
+    }
+}

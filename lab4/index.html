@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        mybox {
+            height: 50px;
+            width: 50px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <my-box></my-box>
+    <script>
+        const buttonTemplate = document.createElement("custom-button")
+        buttonTemplate.innerHTML = 
+        `
+            <style>
+                button {
+                    border-color: green;
+                    border-width: 5px;
+                    border-style: solid;
+                    height: 100px;
+                    width: 100px;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                }
+                p {
+                    color: green;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: xx-large;
+                    font-wight: bold;
+                }
+            </style>
+            <button>
+                <p>1</p>
+            </button>
+        `
+
+        class MyBox extends HTMLElement {
+          
+            constructor() {
+                super();
+                this.attachShadow({mode: 'open'})
+                this.shadowRoot.appendChild(buttonTemplate.cloneNode(true));
+            }
+
+            toggleColor() {
+                const color = ["blue", "green", "red"]
+                this.shadowRoot.querySelector('p').style.color = color[Math.floor(Math.random() * 3)];
+                this.shadowRoot.querySelector('p').innerHTML = Math.floor(Math.random() * 6) + 1;
+            }
+
+            connectedCallback() {
+                this.shadowRoot.querySelector('button')
+                .addEventListener('click', 
+                () => this.toggleColor())
+                    
+            }
+        }
+        window.customElements.define('my-box', MyBox);
+    </script>
+</body>
+
+</html>

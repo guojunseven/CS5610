@@ -1,0 +1,33 @@
+.square-group {
+    display : flex;
+    position : fixed;
+    width : 500px;
+    height : 100px;
+    top: 50%;
+    left: 50%;
+    gap: 20px;
+    margin-top: -50px;
+    margin-left: -250px;
+    justify-content: space-evenly;
+}
+
+.square {
+    background-color : red;
+    width : 100px;
+    height : 100px;
+    
+}
+
+.square:hover {
+    background-color : green;
+    transition: 500ms;
+}
+
+@media screen and (min-width: 600px) {
+    .square {
+        border-width : 10px;
+        border-color: purple;
+        border-style: solid; 
+    }
+}
+  

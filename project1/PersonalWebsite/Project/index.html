@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/common.css"/>
+    <link rel="stylesheet" type="text/css" href="./project.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+    <title>My Website</title>
+</head>
+<body>
+    <div class = "navbar">
+        <div class = "buttons">
+            <div class = "button"><a id = "home_button" href = "/">Home</a></div>
+            <div class = "button"><a id = "project_button" href = "/Project">Project</a></div>
+            <div class = "name">Jun Guo</div>
+            <div class = "button"><a id = "contact_button" href = "/Contact">Contact</a></div>
+            <div class = "button"><a id = "about_button" href = "/Personal">About me</a></div>
+        </div>
+    </div>
+   
+    <div class = "content">
+        <h1 id = "page_title">My Projects</h1>
+        <hr>
+        <div class = project_row>
+            <h2><span>A scalable distributed </span><br>text analysis web application</h2>
+            <a href = "https://github.com/guojunseven/Building-Scalable-Distributed-System"><i class="fab fa-github fa-2x"></i></a>
+            <hr>
+            <p><strong>Description:</strong> I Implemented the web server using Servlet and deployed it through Tomcat on 4 * t2.micro AWS elastic
+                computing servers with a network level elastics load balancer. I Improved the throughput of concurrent requests up to 8000 / s through implementing asynchronous message
+                queues with RabbitMQ with custom channel pool and using the efficient DynamoDB cluster. I Designed the Backend using serverless processing stream and CQRS pattern which applied AWS lambda streaming service listening to the update events for the dynamo database and processing the text to Aurora
+                database for efficient query.</p>
+                
+            </ul>
+        </div>
+        <div class = project_row>
+            <h2><span>A full cycle</span><br>code risk evalution service</h2>
+            <a href = "https://github.com/guojunseven/Building-Scalable-Distributed-System"><i class="fab fa-github fa-2x"></i></a>
+            <hr>
+            <p> <strong>Description:</strong> Developed a service called Quality Metrics Unit using Python in the CI phase of Integrated Pipeline with
+                DevOps fashion which utilized Logistic Regression for evaluating the code risk based on code features and expertise knowledge for saving 90% manual tests. I was responsible for the entire life cycle of the service including training model, developing RESTful API and evaluation web page for labeling and reviewing.</p>
+        </div>
+        <div class = project_row>
+            <h2><span>An online</span><br>campground sharing web application</h2>
+            <a href = "https://floating-meadow-87348.herokuapp.com/"><i class="fas fa-campground fa-2x"></i></a>
+            <a href = "https://github.com/guojunseven/YelpCamp"><i class="fab fa-github fa-2x"></i></a>
+            <hr>
+            <p><strong>Description:</strong> Designed a full stack web application using node.js, express for back-end, html 5, ejs, CSS for front end and mongodb for data storage. The web application supports login, administration, commenting, sharing,
+                in-app notification, fuzzy search, google map api, etc.</p>
+        </div>
+        <div class = project_row>
+            <h2><span>A data mining</span><br>project on Covid-19 diagnosis prediction</h2>
+            <a href = "https://github.com/guojunseven/Data-Mining-Project"><i class="fab fa-github fa-2x"></i></a>
+            <hr>
+            <p><strong>Description:</strong> Collected a huge amount of covid-diagnosis data from API provided by Israel Health Department Website. And construct a complete Pipeline
+            for Data Understanding, Preprocessing, Feature Engineering, Sampling, Modeling and Evaluation. Utilized and compared several ML models like Random Forest, Neuro Network.
+            Explored methods to handle highly imbalanced data to finally get a 90% in AUROC score.</p>
+        </div>
+    </div>
+</body>
+</html>
